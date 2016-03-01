@@ -1,0 +1,17 @@
+﻿<ion-view view-title="用户登陆">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <i class="icon ion-ios-person-outline positive"></i>
+                <input type="text" placeholder="请输入您的用户名" ng-model="loginModel.username">
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-ios-unlocked-outline positive"></i>
+                <input type="password" placeholder="请输入您的密码" ng-model="loginModel.password">
+            </label>
+        </div>
+        <div class="padding-left padding-right">
+            <button class="button button-block button-positive" ng-click="login()" >登录系统</button>
+        </div>
+    </ion-content>
+</ion-view>
