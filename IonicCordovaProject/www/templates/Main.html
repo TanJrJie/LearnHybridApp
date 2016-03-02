@@ -1,10 +1,29 @@
-﻿<ion-view view-title="功能列表">
+﻿<ion-view view-title="库存查询">
     <ion-content>
         <div class="list">
-            <label class="item">
-                <button class="button button-block button-positive" ui-sref="">库存查询</button>
+            <label class="item item-input">
+                物料编码
+                <input type="text" ng-model="NowQuantityModel.MaterialCode">
             </label>
-            
+            <label class="item">
+                <button class="button button-block button-positive" ng-click="NowQuantityQuery()">库存查询</button>
+            </label>
         </div>
+        <!--<ul class="list">
+            <li class="item" ng-repeat="row in rows">{{row.code}}--{{row.name}}--{{row.nowqty}}</li>
+        </ul>-->
+
+        <table>
+            <tr>
+                <td style="width:150px">编码</td>
+                <td style="width:150px">名称</td>
+                <td style="width:150px">库存</td>
+            </tr>
+            <tr ng-repeat="row in rows">
+                <td style="width:150px">{{row.code}}</td>
+                <td style="width:150px">{{row.name}}</td>
+                <td style="width:150px">{{row.nowqty}}</td>
+            </tr>
+        </table>
     </ion-content>
 </ion-view>
